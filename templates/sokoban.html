@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sokoban AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="game-container">
+
+<h1>🔴 SOKOBAN AI</h1>
+
+<p id="moves">Moves : 0</p>
+
+<p id="status"></p>
+
+<div id="board" class="board"></div>
+
+<div class="controls">
+
+<button id="leftBtn">⬅</button>
+
+<button id="upBtn">⬆</button>
+
+<button id="downBtn">⬇</button>
+
+<button id="rightBtn">➡</button>
+
+</div>
+
+<div class="menu">
+
+<button id="resetBtn">🔄 RESET</button>
+
+<a href="/">
+
+<button>🏠 HOME</button>
+
+</a>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='sokoban.js') }}"></script>
+
+</body>
+
+</html>

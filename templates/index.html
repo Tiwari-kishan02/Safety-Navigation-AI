@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Safety Navigation AI</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+<h1>SAFETY NAVIGATION AI</h1>
+
+<p class="subtitle">
+Artificial Intelligence Challenge
+</p>
+
+<div class="buttons">
+
+<a href="/sokoban">
+<button id="sokoban">
+🔴
+<br>
+SOKOBAN
+</button>
+</a>
+
+<a href="/wumpus">
+<button id="wumpus">
+🔵
+<br>
+WUMPUS WORLD
+</button>
+</a>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

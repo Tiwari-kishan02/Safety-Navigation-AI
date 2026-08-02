@@ -1,0 +1,407 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:#050b16;
+
+font-family:'Orbitron',sans-serif;
+
+overflow:hidden;
+
+transition:1s;
+}
+
+.overlay{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:
+
+radial-gradient(circle at center,
+
+rgba(0,255,255,.15),
+
+transparent 70%);
+
+animation:pulse 4s infinite;
+}
+
+.container{
+
+text-align:center;
+
+z-index:2;
+}
+
+h1{
+
+font-size:65px;
+
+color:white;
+
+letter-spacing:6px;
+
+text-shadow:
+
+0 0 15px cyan,
+
+0 0 35px cyan,
+
+0 0 60px cyan;
+
+margin-bottom:20px;
+}
+
+.subtitle{
+
+font-size:24px;
+
+color:#cccccc;
+
+margin-bottom:60px;
+}
+
+.buttons{
+
+display:flex;
+
+gap:60px;
+
+justify-content:center;
+}
+
+button{
+
+width:260px;
+
+height:150px;
+
+font-size:24px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:20px;
+
+cursor:pointer;
+
+transition:.5s;
+
+font-family:'Orbitron',sans-serif;
+}
+
+#sokoban{
+
+background:#8b0000;
+
+color:white;
+
+box-shadow:
+
+0 0 20px red,
+
+0 0 50px red;
+}
+
+#sokoban:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 50px red,
+
+0 0 100px red;
+}
+
+#wumpus{
+
+background:#003cff;
+
+color:white;
+
+box-shadow:
+
+0 0 20px cyan,
+
+0 0 50px cyan;
+}
+
+#wumpus:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 50px cyan,
+
+0 0 100px cyan;
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+.game-container{
+
+text-align:center;
+
+margin-top:30px;
+
+}
+
+.board{
+
+display:grid;
+
+grid-template-columns:repeat(5,80px);
+
+gap:6px;
+
+justify-content:center;
+
+margin-top:30px;
+
+}
+
+.cell{
+
+width:80px;
+
+height:80px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:40px;
+
+border-radius:10px;
+
+}
+
+.wall{
+
+background:#555;
+
+}
+
+.player{
+
+background:#00ff88;
+
+}
+
+.box{
+
+background:orange;
+
+}
+
+.target{
+
+background:gold;
+
+}
+
+.empty{
+
+background:#222;
+
+border:1px solid #555;
+
+}
+
+.board .cell{
+
+background:#222;
+
+border:1px solid #444;
+
+font-size:40px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+/* ========================= */
+/* SOKOBAN GAME */
+/* ========================= */
+
+.game-container{
+    width:100%;
+    text-align:center;
+    color:white;
+}
+
+#moves{
+    font-size:22px;
+    margin:15px;
+    color:#00ffff;
+}
+
+#status{
+    height:35px;
+    font-size:24px;
+    color:#00ff99;
+    font-weight:bold;
+}
+
+.board{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,80px);
+
+    gap:8px;
+
+    justify-content:center;
+
+    margin:30px auto;
+
+}
+
+.cell{
+
+    width:80px;
+
+    height:80px;
+
+    background:#1b1b1b;
+
+    border:2px solid #333;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+    transition:.3s;
+
+}
+
+.cell:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 15px cyan;
+
+}
+
+.controls{
+
+    margin-top:20px;
+
+}
+
+.controls button{
+
+    width:80px;
+
+    height:60px;
+
+    margin:5px;
+
+    font-size:28px;
+
+    background:#111;
+
+    color:white;
+
+    border:2px solid cyan;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.controls button:hover{
+
+    background:cyan;
+
+    color:black;
+
+}
+
+.menu{
+
+    margin-top:25px;
+
+}
+
+.menu button{
+
+    width:170px;
+
+    height:55px;
+
+    margin:10px;
+
+    font-size:18px;
+
+    background:#8b0000;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+}
+
+.menu button:hover{
+
+    background:red;
+
+    transform:scale(1.05);
+
+}
