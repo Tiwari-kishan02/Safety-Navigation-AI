@@ -586,3 +586,8 @@ border-radius:10px;
 display:flex;
 justify-content:center;
 }
+
+.player-move {
+    transform: scale(1.18);
+    transition: transform 0.18s ease;
+}

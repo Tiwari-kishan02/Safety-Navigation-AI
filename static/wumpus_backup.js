@@ -250,7 +250,7 @@ function drawBoard() {
                         break;
 
                     case "C":
-                        icon = "🌿";
+                        icon = "🪙";
                         break;
 
                     case "W":
@@ -313,7 +313,7 @@ function checkWin() {
     if (
         player.row === exitGate.row &&
         player.col === exitGate.col &&
-        collectedCoins >= totalCoins
+        collectedCoins === totalCoins
     ) {
 
         clearInterval(timerInterval);
@@ -640,37 +640,3 @@ window.addEventListener("load", function() {
     finalCheck();
 
 });
-
-function animateMove() {
-
-    if (!board) return;
-
-    const index = player.row * COLS + player.col;
-    const cell = board.children[index];
-
-    if (!cell) return;
-
-    cell.classList.add("player-move");
-
-    setTimeout(function() {
-        cell.classList.remove("player-move");
-    }, 180);
-}
-
-const originalDrawBoard = drawBoard;
-
-drawBoard = function() {
-
-    originalDrawBoard();
-
-    const cells = board.children;
-
-    for (let i = 0; i < cells.length; i++) {
-
-        cells[i].style.transition =
-            "transform 0.18s ease";
-
-    }
-
-    animateMove();
-};
