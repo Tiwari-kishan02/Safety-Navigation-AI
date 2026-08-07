@@ -1,20 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Wumpus World</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wumpus World AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
 </head>
+
 <body>
 
-<h1>WUMPUS WORLD</h1>
+<div class="game-container">
 
-<h2>AI Intelligent Agent</h2>
+<h1>🐉 WUMPUS WORLD AI 🐉</h1>
 
-<p>Welcome to Wumpus World.</p>
+<div class="hud">
+
+<div>🏆 Level : <span id="level">1</span></div>
+
+<div>🪙 Coins : <span id="coins">0</span>/5</div>
+
+<div>⭐ Score : <span id="score">0</span></div>
+
+<div>❤️ Lives : <span id="lives">3</span></div>
+
+<div>⏱ Time : <span id="timer">60</span></div>
+
+</div>
+
+<div id="status">
+
+Collect all coins and reach EXIT 🚪
+
+</div>
+
+<div id="board" class="board"></div>
+
+<div class="controls">
+
+<button id="up">⬆</button>
+
+<div class="row">
+
+<button id="left">⬅</button>
+
+<button id="reset">🔄</button>
+
+<button id="right">➡</button>
+
+</div>
+
+<button id="down">⬇</button>
+
+</div>
+
+<div class="bottom-buttons">
+
+<button onclick="nextLevel()">
+
+⏭ Next Level
+
+</button>
 
 <a href="/">
-    <button>HOME</button>
+
+<button>
+
+🏠 Home
+
+</button>
+
 </a>
 
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='wumpus.js') }}"></script>
+
 </body>
+
 </html>

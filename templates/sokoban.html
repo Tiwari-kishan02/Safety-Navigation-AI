@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sokoban AI</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
@@ -23,33 +20,54 @@
 
 <div class="game-container">
 
-<h1>🔴 SOKOBAN AI</h1>
+<h1>🧩 SOKOBAN AI</h1>
 
-<p id="moves">Moves : 0</p>
+<div class="info">
 
-<p id="status"></p>
+Moves :
+<span id="moves">0</span>
+
+</div>
+
+<div id="status"></div>
 
 <div id="board" class="board"></div>
 
 <div class="controls">
 
-<button id="leftBtn">⬅</button>
-
-<button id="upBtn">⬆</button>
-
-<button id="downBtn">⬇</button>
-
-<button id="rightBtn">➡</button>
+<button onclick="moveUp()">⬆</button>
 
 </div>
 
-<div class="menu">
+<div class="controls">
 
-<button id="resetBtn">🔄 RESET</button>
+<button onclick="moveLeft()">⬅</button>
+
+<button onclick="moveDown()">⬇</button>
+
+<button onclick="moveRight()">➡</button>
+
+</div>
+
+<div class="controls">
+
+<button onclick="resetGame()">
+🔄 Reset
+</button>
+
+<button onclick="nextLevel()">
+⏭ Next Level
+</button>
+
+</div>
+
+<div class="controls">
 
 <a href="/">
 
-<button>🏠 HOME</button>
+<button>
+🏠 Home
+</button>
 
 </a>
 
@@ -57,8 +75,7 @@
 
 </div>
 
-<script src="{{ url_for('static', filename='sokoban.js') }}"></script>
+<script src="{{ url_for('static', filename='sokoban_v2.js') }}"></script>
 
 </body>
-
 </html>
